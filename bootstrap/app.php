@@ -11,7 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->validateCsrfTokens(except: [
+            'stripe/*',
+           'http://localhost/product/create',
+            'http://localhost:8000/login',
+            'http://localhost:8000/profile-image/store/{id}',
+            'http://localhost:8000/api/*'
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

@@ -8,7 +8,5 @@
 <body>
     <h1>new product available email sent to the user    </h1>
 
-
-
 </body>
 </html>
