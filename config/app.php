@@ -13,6 +13,20 @@ return [
     |
     */
 
+    /*
+    |
+    |--------------------------------------------------------------
+    |Rabbitmq driver service registeration
+    |--------------------------------------------------------------
+    |
+    */
+    'providers' => [
+    VladimirYuldashev\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider::class,
+],
+
+
+
+
     'name' => env('APP_NAME', 'Laravel'),
 
     /*

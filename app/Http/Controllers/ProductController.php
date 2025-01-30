@@ -27,19 +27,14 @@ class ProductController extends Controller
     {
     $product = [
         "name"=>$request->name,
-        "price"=>$request->price
+        "price"=>$request->price,
+        'inventory'=>$request->inventory
     ];
 
 
-    Product::created($product);
+    Product::create($product);
 
-    //dispatch a queue that put the email to
-    $name ="mubarak Louis";
     $product = Product::first();
-    $user = [
-        "name"=>"mubarak louis",
-        "email"=>"mubaraklouis@gmail.com"
-    ];
 
     //dispatch the job for creating the product
 
